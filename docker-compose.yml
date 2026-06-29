@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongo:5.0.16
+    volumes:
+      - ./mongo:/data/db ##./mongo es el local donde se ubica mi proyecto  /data/db es donde se guarda la bd en el container en este¿a version
+    ports:
+      - 27017:27017 ## puerto_equipo:puerto_container
+    restart: always
