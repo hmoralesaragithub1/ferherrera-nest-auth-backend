@@ -17,6 +17,8 @@ async function bootstrap() {
 
   const PORT = process.env.PORT ?? 3000;
   console.log(`App corriendo en el puerto ${PORT}`);
-  await app.listen(process.env.PORT ?? 3000);
+  console.log('process.env.MONGO_URI', process.env.MONGO_URI);
+  console.log('process.env.MONGO_DB_NAME', process.env.MONGO_DB_NAME);
+  await app.listen(PORT);
 }
 bootstrap();
